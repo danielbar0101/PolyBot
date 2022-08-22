@@ -10,8 +10,8 @@ def process_msg(msg):
     search_download_youtube_video(msg)
 
     # TODO upload the downloaded video to your S3 bucket
-s3 = boto3.resource('s3')
-    BUCKET = "DanielBarsProject-vpce-s3"
+    s3 = boto3.resource('s3')
+    BUCKET = "firstaccesspoint-rnxo4y7g6jia1k6ki81yrdj1z5ccoeuw2a-s3alias"
 
     s3.Bucket(BUCKET).upload_file(process_msg(), "dump/file")
 
